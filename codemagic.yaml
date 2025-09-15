@@ -11,10 +11,13 @@ workflows:
         script: flutter pub get
       - name: Build Android APK
         script: flutter build apk --release
+      - name: Build Android App Bundle (AAB)
+        script: flutter build appbundle --release
       - name: Build Web Release
         script: flutter build web --release
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
+      - build/app/outputs/bundle/release/app-release.aab
       - build/web
     publishing:
       email:
