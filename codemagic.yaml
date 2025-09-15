@@ -5,7 +5,6 @@ workflows:
     environment:
       flutter: stable
       xcode: latest
-      android: latest
     scripts:
       - name: Get dependencies
         script: flutter pub get
